@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/javascript.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>UNIR Reproductor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" class="contenedor-principal">
+    <h1>UNIR</h1>
+    <h2><b>Practica:</b>Vídeo utilizando el estándar HTM5 a través de JavaScript y CSS</h2>
+    <h3><b>Alumno:</b> Juan Carlos Ledezma</h3>
+    <br/>
+    <div class="contenedor-reproductor">
+        <video id="video-1" class="video" src="/public/video-1.mp4">
+            <track
+                    default
+                    id="subtitulos-control"
+                    label="Español"
+                    kind="subtitles"
+                    srclang="es"
+                    src="/public/subtitulos/es.vtt"
+            />
+
+            <p>Actualiza tu navegador para ver utitilizar videos en HTML5.</p>
+        </video>
+        <div class="lista-de-reproduccion">
+            <p>Lista de Reproducccion: </p>
+            <video class="video-lista" id="video-2" src="/public/video-2.mp4">
+            </video>
+            <video class="video-lista" id="video-3" src="/public/video-3.mp4">
+            </video>
+        </div>
+    </div>
+    <div class="contenedor-controles">
+        <div class="controls">
+
+            <div class="control-de-reproductor">
+                <button id="reproducir" class="reproducir" title="reproducir">
+                    Play ►
+                </button>
+            </div>
+            <div class="control-de-reproductor">
+                <button id="mute" class="reproducir" title="mute">
+                    Mute 🔇
+                </button>
+            </div>
+            <div class="control-de-reproductor">
+              <span>
+              Tamaño del Reproductor
+              </span>
+                <input
+                        id="tamanio"
+                        type="range"
+                        name="tan"
+                        class="tamanio"
+                        min="10"
+                        max="80"
+                        value="80"
+                />
+            </div>
+            <div class="control-de-reproductor">
+              <span>
+              Volumen
+              </span>
+                <input
+                        id="volumen"
+                        type="range"
+                        name="volumen"
+                        class="volumen"
+                        min="0"
+                        max="1"
+                        step="0.05"
+                        value="1"
+                />
+            </div>
+            <div class="control-de-reproductor">
+              <span>
+              Velocidad
+              </span>
+
+                <input
+                        id="velocidad"
+                        type="range"
+                        name="velocidad"
+                        class="velocidad"
+                        min="0.5"
+                        max="2"
+                        step="0.1"
+                        value="1"
+                />
+            </div>
+            <div class="control-de-reproductor">
+              <span>
+              Saltar
+              </span>
+                <button id="retroceder" class="retroceder">« 10s</button>
+                <button id="adelantar" class="adelantar">10s »</button>
+            </div>
+            <div class="control-de-reproductor">
+                <button id="subtitulos" class="reproducir" title="subtitulos">
+                    Ocultar Subtitulos
+                </button>
+
+                <button id="capturar" class="reproducir" title="capturar">
+              <span>
+              Captura 🖼
+              </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="module" src="/main.js"></script>
+</body>
+</html>
